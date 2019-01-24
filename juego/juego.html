@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+                font-family: Arial;
+                color: white;
+            }
+            img {
+                display: none;   
+            }
+#or1c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #00af00;
+}
+#or1c2{
+    width:100px;
+    height:100px;
+    display: none;
+    background:  #f8f8f8;
+}
+#or1c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#or2c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#or2c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+#or2c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #0040FF;
+}
+#or3c1{
+    width:100px;
+    height:100px;
+    display: none;
+	background: #ffff00;
+}
+#or3c2{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #0040FF;
+}
+#or3c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#or4c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#or4c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+
+#or5c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #02cbfc;
+}
+#or5c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+
+#or6c1{
+    
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#or6c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background: #ffff00; 
+}
+#or6c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #00af00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#oc1c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #00af00;
+}
+#oc1c2{
+    width:100px;
+    height:100px;
+    display: none;
+    background:  #f8f8f8;
+}
+#oc1c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#oc2c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#oc2c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+#oc2c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #0040FF;
+}
+#oc3c1{
+    width:100px;
+    height:100px;
+    display: none;
+	background: #ffff00;
+}
+#oc3c2{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #0040FF;
+}
+#oc3c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#oc4c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#oc4c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+
+#oc5c1{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #02cbfc;
+}
+#oc5c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background:  #f8f8f8;
+}
+
+#oc6c1{
+    
+    width:100px;
+    height:100px;
+    display: none;
+    background: #ff0000;
+}
+#oc6c2{
+    width:100px;
+    height:100px;
+    display: none;
+	background: #ffff00; 
+}
+#oc6c3{
+    width:100px;
+    height:100px;
+    display: none;
+    background: #00af00;
+}
+    </style>
+<style src="diseño.css"></style>
+<script src="jquery-3.3.1.min.js">  </script>
+<script src="sweetalert2.all.js">  </script>
+<script src="func.js">  </script>
+    <script>
+
+var id1 = 0;
+var id2 = 0;
+var vida =3;
+    //oriente: 1.iran,2.holanda,3.rumania,4.austria,5.San MArino,6.Ghana,7.,8.,9.
+    //occidente: 1.mexico,2.Panama,3.ecuador,4.Peru,5.Argentina,6.Bolivia,7.,8.,9.
+    $(document).ready(function(){
+    	$("#orient1").click(function(){
+    		$("#or1c1").fadeIn("slow");
+    		$("#or1c2").fadeIn("slow");
+            $("#or1c3").fadeIn("slow");
+            $("#ir").fadeIn("slow");
+			$("#orient2").hide();
+            $("#orient3").hide();
+            $("#orient4").hide();
+            $("#orient5").hide();
+            $("#orient6").hide();
+            id1=1;  
+            msg();
+            validar(id1,id2,vida);
+        });
+        $("#orient2").click(function(){
+    		$("#or2c1").fadeIn("slow");
+    		$("#or2c2").fadeIn("slow");
+            $("#or2c3").fadeIn("slow");
+            $("#hol").fadeIn("slow");
+			$("#orient1").hide();
+            $("#orient3").hide();
+            $("#orient4").hide();
+            $("#orient5").hide();
+            $("#orient6").hide();
+             id1=2;
+             msg();
+             validar(id1,id2,vida);
+        });
+        $("#orient3").click(function(){
+    		$("#or3c1").fadeIn("slow");
+    		$("#or3c2").fadeIn("slow");
+            $("#or3c3").fadeIn("slow");
+            $("#ro").fadeIn("slow");
+			$("#orient2").hide();
+            $("#orient1").hide();
+            $("#orient4").hide();
+            $("#orient5").hide();
+            $("#orient6").hide();
+             id1=3;
+             validar(id1,id2,vida);
+        });
+        $("#orient4").click(function(){
+    		$("#or4c1").fadeIn("slow");
+    		$("#or4c2").fadeIn("slow");
+            $("#or4c3").fadeIn("slow");
+            $("#aus").fadeIn("slow");
+			$("#orient2").hide();
+            $("#orient3").hide();
+            $("#orient1").hide();
+            $("#orient5").hide();
+            $("#orient6").hide();
+             id1=4;
+             msg();
+             validar(id1,id2,vida);
+        });
+        $("#orient5").click(function(){
+    		$("#or5c1").fadeIn("slow");
+    		$("#or5c2").fadeIn("slow");
+            $("#or5c3").fadeIn("slow");
+            $("#san").fadeIn("slow");
+			$("#orient2").hide();
+            $("#orient3").hide();
+            $("#orient4").hide();
+            $("#orient1").hide();
+            $("#orient6").hide();
+             id1=5;
+             msg();
+             validar(id1,id2,vida);
+        });
+        $("#orient6").click(function(){
+    		$("#or6c1").fadeIn("slow");
+    		$("#or6c2").fadeIn("slow");
+            $("#or6c3").fadeIn("slow");
+            $("#gh").fadeIn("slow");
+			$("#orient2").hide();
+            $("#orient3").hide();
+            $("#orient4").hide();
+            $("#orient5").hide();
+            $("#orient1").hide();
+             id1=6;
+             msg();
+             validar(id1,id2,vida);
+        });
+		//Occidentales
+		$("#occid3").click(function(){
+    		$("#oc1c1").fadeIn("slow");
+    		$("#oc1c2").fadeIn("slow");
+            $("#oc1c3").fadeIn("slow");
+            $("#mx").fadeIn("slow");
+             id2=1;
+             validar(id1,id2,vida);
+             vida=vida-1;
+        });
+        $("#occid5").click(function(){
+    		$("#oc2c1").fadeIn("slow");
+    		$("#oc2c2").fadeIn("slow");
+            $("#oc2c3").fadeIn("slow");
+            $("#pan").fadeIn("slow");
+             id2=2;
+             validar(id1,id2,vida);
+        });
+        $("#occid4").click(function(){
+    		$("#oc3c1").fadeIn("slow");
+    		$("#oc3c2").fadeIn("slow");
+            $("#oc3c3").fadeIn("slow");
+            $("#ec").fadeIn("slow");
+             id2=3;
+             validar(id1,id2,vida);
+             vida=vida-1;
+        });
+        $("#occid2").click(function(){
+    		$("#oc4c1").fadeIn("slow");
+    		$("#oc4c2").fadeIn("slow");
+            $("#oc4c3").fadeIn("slow");
+            $("#per").fadeIn("slow");
+             id2=4;
+             validar(id1,id2,vida);
+             vida=vida-1;
+        });
+        $("#occid6").click(function(){
+    		$("#oc5c1").fadeIn("slow");
+    		$("#oc5c2").fadeIn("slow");
+            $("#oc5c3").fadeIn("slow");
+            $("#arg").fadeIn("slow");
+             id2=5;
+             validar(id1,id2,vida);
+             vida=vida-1;
+        });
+        $("#occid1").click(function(){
+    		$("#oc6c1").fadeIn("slow");
+    		$("#oc6c2").fadeIn("slow");
+            $("#oc6c3").fadeIn("slow");
+            $("#bol").fadeIn("slow");
+             id2=6;
+             validar(id1,id2,vida);
+             vida=vida-1;
+        });
+        $("#play").click(function(){ 
+            location.reload();
+        });
+        
+
+    });
+
+    </script>
+</head>
+<body background="0DC.jpg">
+    <center>
+        <h1>Encuentra el Pais que coincide</h1>
+        <h2>Paises del Oriente</h2>
+		<table class='table'> 
+				<tr>
+<th><button id="orient1">Juega</button></th>
+<th><button id="orient2">Juega</button></th>
+<th><button id="orient3">Juega</button></th>
+<th><button id="orient4">Juega</button></th>
+<th><button id="orient5">Juega</button></th>
+<th><button id="orient6">Juega</button></th>
+</tr>
+<tr>
+	<th><div id="or1c1"></div>
+		<div id="or1c2"></div>
+		<div id="or1c3"></div>
+	</th>
+	<th><div id="or2c1"></div>
+		<div id="or2c2"></div>
+		<div id="or2c3"></div>
+	</th>
+	<th><div id="or3c1"></div>
+		<div id="or3c2"></div>
+		<div id="or3c3"></div>
+    </th>
+    <th><div id="or4c1"></div>
+		<div id="or4c2"></div>
+		<div id="or4c3"></div>
+    </th>
+    <th><div id="or5c1"></div>
+		<div id="or5c2"></div>
+		<div id="or5c3"></div>
+    </th>
+    <th><div id="or6c1"></div>
+		<div id="or6c2"></div>
+		<div id="or6c3"></div>
+	</th>
+</tr>
+<tr> 
+        <th><img src="img/ir.png" id="ir"> </th>
+        <th><img src="img/hol.jpg" id="hol"> </th>
+        <th><img src="img/ro.png" id="ro"> </th>
+        <th><img src="img/aus.png" id="aus"> </th>
+        <th><img src="img/san.png" id="san"> </th>
+        <th><img src="img/gh.png" id="gh"> </th>
+</tr>
+
+		</table>
+           <br>
+           <br>
+		<h2>Paises del Occidente</h2>
+		<table class='table'> 
+			<tr>
+				<th><button id="occid3">Juega</button></th>
+				<th><button id="occid5">Juega</button></th>
+                <th><button id="occid4">Juega</button></th>
+                <th><button id="occid2">Juega</button></th>
+				<th><button id="occid6">Juega</button></th>
+				<th><button id="occid1">Juega</button></th>
+				</tr>
+				<tr>
+                    <th><div id="oc1c1"></div>
+                        <div id="oc1c2"></div>
+                        <div id="oc1c3"></div>
+                    </th>
+                    <th><div id="oc2c1"></div>
+                        <div id="oc2c2"></div>
+                        <div id="oc2c3"></div>
+                    </th>
+                    <th><div id="oc3c1"></div>
+                        <div id="oc3c2"></div>
+                        <div id="oc3c3"></div>
+                    </th>
+                    <th><div id="oc4c1"></div>
+                        <div id="oc4c2"></div>
+                        <div id="oc4c3"></div>
+                    </th>
+                    <th><div id="oc5c1"></div>
+                        <div id="oc5c2"></div>
+                        <div id="oc5c3"></div>
+                    </th>
+                    <th><div id="oc6c1"></div>
+                        <div id="oc6c2"></div>
+                        <div id="oc6c3"></div>
+                    </th>
+                </tr>
+                <tr>
+                        <th><img src="img/mx.png" id="mx"> </th>
+                        <th><img src="img/pan.png" id="pan"> </th>
+                        <th><img src="img/ec.png" id="ec"> </th>
+                        <th><img src="img/per.png" id="per"> </th>
+                        <th><img src="img/arg.png" id="arg"> </th>
+                        <th><img src="img/bol.jpg" id="bol"> </th>
+                </tr>
+                    </table>   
+                </center>
+                <button id="play">Reintentar</button>   
+    
+</body>
+</html>          
